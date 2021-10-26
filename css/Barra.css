@@ -1,11 +1,12 @@
 .Arriba{
-    margin-top: 15px;
+    position: fixed;
     margin-left: 5px;
     display: flex;
     flex-direction: row;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     height: 35px;
+    background: white;
 }
 
 .Arriba2{
@@ -40,22 +41,3 @@ ul{
     text-decoration:none;
     color: black;
 }
-
-table {
-    margin-top: 1em;
-    margin-left: 1em;
-    border-collapse: collapse;
-    border-radius: 0.7em;
-    overflow: hidden;
-}
-
-th, td {
-    padding: 10px;
-
-}
-tr:nth-child(even) {background-color: #f2f2f2;}
-
-th {
-    background-color: #04AA6D;
-    color: white;
- }

@@ -1,0 +1,41 @@
+#btn-mas{
+    display: none;
+}
+
+.conteiner{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;    
+}
+
+.accion a, .boton-mas{
+    display: block;
+    text-decoration: none;
+    background: #04AA6D;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 300ms ease;
+}
+
+.accion a{
+    margin-bottom: -10 px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-mas:checked~ .accion a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.boton-mas{
+    cursor: pointer;
+}
