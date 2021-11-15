@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="../css/Tabla.css">
     <link rel="stylesheet" href="../css/Boton-mas.css">
     <link rel="stylesheet" href="../css/Ventana-emergente.css">
-    <script>
-        function abrir(){
-            document.getElementById("ventana").style.display="block";
-            document.getElementById("ventana").style.position="fixed";
-        }
-        function cerrar(){
-            document.getElementById("ventana").style.display="none";
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="../JavaScript/JavaScript-index.js"></script>
 </head>
 <body>
     <div class="Arriba">
@@ -44,180 +37,76 @@
     </div>
 
     <div class="tabla">
-        <table>
+        <table id="idTabla">
             <tr>
                 <th>Productos</th>
                 <th>Cantidad</th>
-                <th>Categoria</th>
                 <th>Proveedor</th>
+                <th>Costo total</th>
                 <th>Costo unitario</th>
-                <th>Precio unitario</th>
-            </tr>
-            <tr>
-                <td>Tennessee</td>
-                <td>12</td>
-                <td>Vasos</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
+                <th>Precio venta</th>
+                <th></th>
             </tr>
             <tr>
                 <td>Dubai</td>
-                <td>18</td>
-                <td>Vasos</td>
-                <td>fsfsd</td>
+                <td>10</td>
+                <td>Juan Carlos</td>
                 <td>$1200</td>
                 <td>$120</td>
+                <td>$174</td>
+                <td><img class="iconEliminar" src="../Imagenes/Eliminar.png" ></td>
             </tr>
             <tr>
-                <td>Caja de Cera</td>
-                <td>18</td>
-                <td>Cera</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
+                <td>Tennesee</td>
+                <td>13</td>
+                <td>Lionel Messi</td>
+                <td>$4000</td>
+                <td>$307</td>
+                <td>$430</td>
+                <td><img class="iconEliminar" src="../Imagenes/Eliminar.png" ></td>
             </tr>
             <tr>
                 <td>Roma</td>
-                <td>18</td>
-                <td>Vaso</td>
-                <td>fsfsd</td>
-                <td>$273</td>
-                <td>$234</td>
+                <td>5</td>
+                <td>FAFAF</td>
+                <td>$500</td>
+                <td>$100</td>
+                <td>$140</td>
+                <td><img class="iconEliminar" src="../Imagenes/Eliminar.png" ></td>
             </tr>
             <tr>
                 <td>Dubai</td>
-                <td>18</td>
-                <td>Vasos</td>
-                <td>fsfsd</td>
+                <td>10</td>
+                <td>Juan Carlos</td>
                 <td>$1200</td>
                 <td>$120</td>
+                <td>$174</td>
+                <td><img class="iconEliminar" src="../Imagenes/Eliminar.png" ></td>
             </tr>
-            <tr>
-                <td>Caja de Cera</td>
-                <td>18</td>
-                <td>Cera</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
+            <tr class="id">
                 <td>Roma</td>
-                <td>18</td>
-                <td>Vaso</td>
-                <td>fsfsd</td>
-                <td>$273</td>
-                <td>$234</td>
+                <td>5</td>
+                <td>FAFAF</td>
+                <td>$500</td>
+                <td>$100</td>
+                <td>$140</td>
+                <td><img class="iconEliminar" src="../Imagenes/Eliminar.png" ></td>
             </tr>
-            <tr>
-                <td>Dubai</td>
-                <td>18</td>
-                <td>Vasos</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Caja de Cera</td>
-                <td>18</td>
-                <td>Cera</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Roma</td>
-                <td>18</td>
-                <td>Vaso</td>
-                <td>fsfsd</td>
-                <td>$273</td>
-                <td>$234</td>
-            </tr>
-            <tr>
-                <td>Dubai</td>
-                <td>18</td>
-                <td>Vasos</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Caja de Cera</td>
-                <td>18</td>
-                <td>Cera</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Roma</td>
-                <td>18</td>
-                <td>Vaso</td>
-                <td>fsfsd</td>
-                <td>$273</td>
-                <td>$234</td>
-            </tr>
-            <tr>
-                <td>Dubai</td>
-                <td>18</td>
-                <td>Vasos</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Caja de Cera</td>
-                <td>18</td>
-                <td>Cera</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Roma</td>
-                <td>18</td>
-                <td>Vaso</td>
-                <td>fsfsd</td>
-                <td>$273</td>
-                <td>$234</td>
-            </tr>
-            <tr>
-                <td>Dubai</td>
-                <td>18</td>
-                <td>Vasos</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Caja de Cera</td>
-                <td>18</td>
-                <td>Cera</td>
-                <td>fsfsd</td>
-                <td>$1200</td>
-                <td>$120</td>
-            </tr>
-            <tr>
-                <td>Roma</td>
-                <td>18</td>
-                <td>Vaso</td>
-                <td>fsfsd</td>
-                <td>$273</td>
-                <td>$234</td>
-            </tr>
-            
         </table>    
     </div>
 
     <div class="conteiner">
-        <input type="checkbox" id="btn-mas">
+        <input type="checkbox" id="btn-mas" onclick="onclicMas()">
         <div class="accion">
             <a href="javascript: abrir()">Crear</a>
             <a href="">Editar</a>
-            <a href="">Borrar</a>
+            <a href="javascript: mostrarborrar()">Borrar</a>
         </div>
         <div>
-            <label for="btn-mas" class="boton-mas">+</label>
+            <label for="btn-mas">
+            <img class="boton-mas" id="boton" src="../Imagenes/mas1.png">
+            <img class="boton-mas" id="boton2" src="../Imagenes/minus.png">
+            </label>
         </div>
     </div>
 
@@ -226,25 +115,21 @@
         <form action="">
             Producto:
             <br>    
-            <input type="text" size="50px"/>
-            <br>
+            <input type="text" size="50px" id="idProducto" class="classInput"/>
+            <p class="parrafo" id="productoMostrar">Debe completar el campo producto</p>
             Cantidad:
             <br>
-            <input type="text" size="50px"/> 
-            <br>
-            Categoria:
-            <br>
-            <input type="text" size="50px"/>
-            <br>
+            <input type="number" size="50px" id="idCantidad" class="classInput"/> 
+            <p class="parrafo" id="cantidadMostrar">Debe completar el campo cantidad</p>
             Proveedor:
             <br>
-            <input type="text" size="50px"/>
+            <input type="text" size="50px" id="idProveedor" class="classInput"/>
+            <p class="parrafo" id="proveedorMostrar">Debe completar el campo proveedor</p>
+            Costo total:
             <br>
-            Costo unitario:
-            <br>
-            <input type="text" size="50px"/>
-            <br>
-            <input type="submit" value="Guardar">
+            <input type="number" size="50px" id="idCosto" class="classInput"/>
+            <p class="parrafo" id="costoMostrar">Debe ingresar el costo</p>
+            <input type="button" value="Guardar" onclick="agregar()">
         </form>
     </div>
 </body>
