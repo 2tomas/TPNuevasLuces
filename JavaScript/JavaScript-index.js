@@ -1,5 +1,8 @@
 var botonCrear= true;
 var botonborrar= true;
+var cont=0;
+cont= parseInt(cont);
+var a=1;
 
 function abrir(){
     if(botonCrear== true){
@@ -35,8 +38,16 @@ function agregar(){
     var precioVenta= (145*CostoUnitario)/100;
     if (resultado){
         var tabla = document.getElementById("idTabla");
-        tabla.innerHTML+="<tr id='idTr'><td>"+ producto+"</td><td>"+cantidad+"</td><td>"+proveedor+"</td><td>$"+costo+"</td><td> $" +CostoUnitario+"</td><td> $"+ precioVenta +"</td></tr>";
-    }    
+        tabla.innerHTML+="<tr><td>"+ producto+"</td><td>"+cantidad+"</td><td>"+proveedor+"</td><td>$"+costo+"</td><td> $" +CostoUnitario+"</td><td> $"+ precioVenta +"</td><td><img class='iconEliminar' src='../Imagenes/Eliminar.png'> </td></tr>";
+        cont= cont+1;
+    }   
+
+    var i=document.querySelectorAll("tbody:nth-child(n)");
+    if(a %2==0){
+    } else{
+        i[a].style.backgroundColor="#f2f2f2";
+    }
+    a++;
 }
 
 function validar(producto, cantidad, proveedor, costo){
@@ -95,30 +106,27 @@ function onclicMas(){
 
 function mostrarborrar(){
    var c= document.querySelectorAll('td:nth-child(7)');
-   document.querySelector("th:nth-child(7)").style.display="block";
-   document.querySelector("th:nth-child(7)").style.height= "26px";
-
    if(botonborrar== true){
-    c[0].style.display="block";
-    c[1].style.display="block";
-    c[2].style.display="block";
-    c[3].style.display="block";
-    c[4].style.display="block";
-    botonborrar= false;
-   } else{
+        for (var x=0; x<cont; x++){
+            c[x].style.display="block";
+        }
+        document.querySelector("th:nth-child(7)").style.display="block";
+        document.querySelector("th:nth-child(7)").style.height= "26px";
+        botonborrar= false;
+   } else {
+    for (var x=0; x<cont; x++){
+        c[x].style.display="none";
+    }
     document.querySelector("th:nth-child(7)").style.display="none";
-    c[0].style.display="none";
-    c[1].style.display="none";
-    c[2].style.display="none";
-    c[3].style.display="none";
-    c[4].style.display="none";
     botonborrar= true;
-   }    
+   } 
 }
 
 $(function () {
     $(document).on('click', '.iconEliminar', function (event) {
         event.preventDefault();
         $(this).closest('tr').remove();
+        cont=cont-1;
     });
 });
+
