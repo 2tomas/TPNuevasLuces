@@ -40,6 +40,11 @@ function agregar(){
         var tabla = document.getElementById("idTabla");
         tabla.innerHTML+="<tr><td>"+ producto+"</td><td>"+cantidad+"</td><td>"+proveedor+"</td><td>$"+costo+"</td><td> $" +CostoUnitario+"</td><td> $"+ precioVenta +"</td><td><img class='iconEliminar' src='../Imagenes/Eliminar.png'> </td></tr>";
         cont= cont+1;
+
+        document.getElementById("idProducto").value = "";
+        document.getElementById("idCantidad").value = "";
+        document.getElementById("idProveedor").value = "";
+        document.getElementById("idCosto").value = "";
     }   
 
     var i=document.querySelectorAll("tbody:nth-child(n)");
