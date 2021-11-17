@@ -13,7 +13,7 @@ th, td {
     padding: 10px;
 
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(even) {background-color: #c0bdbd}
 
 td:nth-child(7) {display: none;}
 th:nth-child(7) {display: none;}

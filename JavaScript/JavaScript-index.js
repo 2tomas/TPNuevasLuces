@@ -44,8 +44,9 @@ function agregar(){
 
     var i=document.querySelectorAll("tbody:nth-child(n)");
     if(a %2==0){
+        i[a].style.backgroundColor="white";
     } else{
-        i[a].style.backgroundColor="#f2f2f2";
+        i[a].style.backgroundColor="#c0bdbd";
     }
     a++;
 }
